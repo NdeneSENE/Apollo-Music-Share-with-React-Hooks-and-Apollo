@@ -7,7 +7,7 @@ import { GET_QUEUED_SONGS } from "./queries";
 
 const client = new ApolloClient({
   link: new WebSocketLink({
-    uri: "wss://light-skunk-52.hasura.app/v1/graphql",
+    uri: "wss://GRAPHQL_ENDPOINT",
     options: {
       reconnect: true,
     },
@@ -75,7 +75,7 @@ client.writeData({ data });
 // import ApolloClient from "apollo-boost";
 
 // const client = new ApolloClient({
-//   uri: "https://light-skunk-52.hasura.app/v1/graphql",
+//   uri: "GRAPHQL_ENDPOINT",
 // });
 
 export default client;
